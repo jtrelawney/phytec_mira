@@ -1,0 +1,55 @@
+1. install ubuntu 16.05
+
+2. install vmware
+https://itsfoss.com/install-vmware-player-ubuntu-1310/
+
+comes down to downloading the bundle, making it executable and running it, this installs the vmplayer.
+
+at first start it asks the user agreements ...
+
+
+3. download phytec mira container for vmware and unzip
+4. follow installation instructions under readme from phytec
+https://www.phytec.de/documents/vm-readme/
+
+5 bios settings
+under cpu cofnig enable virtualziation technologies
+under miscelanous config enable vt-d
+
+6. start vm machine, it install some updates
+
+7 top left - virtual machine - machine settings it shows the HS
+add a NAT and configure :
+start at power on
+per defualt the NAT adapter is set to share the hosts ip address which the mira doesn't know 
+hence under network connection select bridged - direct physical connection
+the VM then uses the wired1 configuration settings of the VM
+those have to be configured as per manual:
+set ipv4 settings to 192.168.3.10
+the mira is 192.168.3.11
+
+this finds the mira on the network
+
+problem:
+host key verification fails, because the ssh keys in the vm are different on the machine were the container was created
+hence delete the config so that it can be updated
+
+ssh-keygen -R 192.168.3.11
+
+after that the ssh script works and connects to the mira board
+
+
+----------------------------------------
+
+
+when the vm sleeps, on wakeup it want the password in german key board layout -> y is z
+
+https://en.wikipedia.org/wiki/German_keyboard_layout
+
+- is the button left shift
+_ is the button left to shift to with ctrl
+
+----------------------------------------
+
+
+

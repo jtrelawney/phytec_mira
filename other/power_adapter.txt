@@ -1,0 +1,14 @@
+power - looking at supply with teeth on top as it fits the mira:
+
+1	2	3	4	5	6
+-	-	23.88	3.3	gnd	4.88
+
+power lookig at mira input - reverse from above
+
+1	2	3	4	5	6
+5	GND	3.3	24	-	-
+
+the power supply has 2 converters, looking from the top with the 24 on left"
+the left is 3.3 between left and middle pin
+the right is 5.0 between left and middle pin
+
