@@ -58,6 +58,8 @@ https://en.wikipedia.org/wiki/German_keyboard_layout
 - is the button left shift
 _ is the button left to shift to with ctrl
 
+best to change settings under language settings - regional support
+
 ----------------------------------------
 
 
