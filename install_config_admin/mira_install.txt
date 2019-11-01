@@ -41,6 +41,15 @@ after that the ssh script works and connects to the mira board
 
 ----------------------------------------
 
+to use git clone the repo onto the host
+under vm - settings - options create a shared folder to the git repo and set it activve
+this folder appears under /mnt/hgfs on the vm directory structure
+
+
+
+
+----------------------------------------
+
 
 when the vm sleeps, on wakeup it want the password in german key board layout -> y is z
 

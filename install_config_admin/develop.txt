@@ -1,0 +1,26 @@
+to start eclipse:
+
+!!! first set the enviroment for the crosscompiler or nothing works
+when using the usb boot disk this step is not necessary and easily missed
+
+under /opt/phytec-yogurth/ complete the path to environment-setup-cortexa9hf-neon-phytec-linux-gnueabi
+then source the settings:
+for example
+
+source /opt/phytec-yogurt/BSP-Yocto-i.MX6-PD18.1.0/environment-setup-cortexa9hf-neon-phytec-linux-gnueabi
+
+this exports all env variables necessarz for invoking the crosscompiler and linker correctlz
+only then start eclipse
+the sourcing step has to be repeated next time
+or put it in the startup script
+
+
+
+
+#/bin/bash
+
+source /opt/phytec-yogurt/BSP-Yocto-i.MX6-PD18.1.0/environment-setup-cortexa9hf-neon-phytec-linux-gnueabi
+
+eclipse &
+
+
