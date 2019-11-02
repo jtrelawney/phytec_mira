@@ -1,3 +1,6 @@
+==============================================================================================================
+this section applies to a ubuntu install and config:
+
 to start eclipse:
 
 !!! first set the enviroment for the crosscompiler or nothing works
@@ -23,4 +26,35 @@ source /opt/phytec-yogurt/BSP-Yocto-i.MX6-PD18.1.0/environment-setup-cortexa9hf-
 
 eclipse &
 
+
+==============================================================================================================
+this section worked on the usb boot stick, where a lot of config is already done
+setting the compiler and linker settings maybe helful for the ubuntu install as well
+
+
+Neues project in eclipse:
+
+wie gewohnt ein C projekt erstellen mit HelloWorld template
+build creates code for hostemachine, i.e. this iwll not run on mira
+change project properties to:
+c/c++ build -> settings / tab toolsettings (the first of many)
+for compiler set command to ${CC}
+for linker set command to ${CC} and in commandline pattern add ${LDFLAGS} behind $(comman)
+for assembler set command to ${AS}
+apply 
+
+tab build steps (the 2nd):
+post build steps 
+set command to:
+scp ./HelloTest root@192.168.3.10:/home/root/.
+
+this copies the project folder over to mira
+
+
+or
+
+manually copy file to remote mira and execute:
+scp /path/to/file username@a:/path/to/destination
+scp HelloTest root@192.168.3.10:/home/root
+ssh into mira and execute code in debug this should now work
 

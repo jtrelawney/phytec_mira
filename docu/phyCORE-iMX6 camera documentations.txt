@@ -1,0 +1,8 @@
+
+If you want to use a camera at the phyCORE-i.MX6 Kit,
+you can find further documentation in the directory /opt/PHYTEC_Tools/Documentation and check also our ftp-server for newer versions:
+
+        ftp://ftp.phytec.de/pub/ImageProcessing/
+
+please navigate to the folder of your current BSP
+e.g. .../phyBOARD-Mira-i.MX6_linux_PD15.2.0/Documentation/...
